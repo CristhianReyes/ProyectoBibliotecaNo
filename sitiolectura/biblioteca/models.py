@@ -19,7 +19,7 @@ class Autor(models.Model):
         cadena = "%s %s" %(self.nombre, self.apellido)
         return cadena
 
-class Libro(model.Model):
+class Libro(models.Model):
     titulo = models.CharField(max_length=100)
     autores = models.ManyToManyField(Autor)
     editor = models.ForeignKey(Editor)
